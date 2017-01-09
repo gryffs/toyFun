@@ -1,3 +1,10 @@
+/*
+In an array of every possible anagram of a given string, what index would the original string occupy?
+
+Here is the catch: Your function should be able to accept any word 20 letters or less in length
+(possibly with some letters repeated), and take no more than 5000 milliseconds to run.
+*/
+
 function anagramPosition (string) {
   // I listed all possible factorials instead of calculating
   const factorial = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000, 51090942171709440000, 1124000727777607680000, 25852016738884976640000, 620448401733239439360000, 15511210043330985984000000];
@@ -54,3 +61,6 @@ function anagramPosition (string) {
     return denominator;
   }
 }
+anagramPosition('CHAD'); // => 11
+anagramPosition('GRIFFIS'); // => 493
+anagramPosition('MISSISSIPPI'); // => 13,737
