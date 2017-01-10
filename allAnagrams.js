@@ -20,4 +20,4 @@ function allAnagrams (string) {
   return result;
 }
 
-allAnagrams('abc') / => [ "abc", "acb", "bac", "bca", "cab", "cba" ]
+allAnagrams('abc') // => [ "abc", "acb", "bac", "bca", "cab", "cba" ]
