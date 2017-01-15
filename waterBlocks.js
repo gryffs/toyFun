@@ -37,26 +37,28 @@ we have 1 and this is the exact number of water blocks in our visual.
 
 var waterBlocks = function (blocks) {
 
-  const maxLeft = {};
+  const maxLeft = {};  // the two tracking objects
   const maxRight = {};
   let temp = 0;
   let total = 0;
   
   for(let i = 0; i < blocks.length; i++) {
-    temp = 0;
+    temp = 0;  // build the largest number moving from Left to right
     if(i !== 0) {
       temp = maxLeft[i - 1];
-    }
+    }  // use the largest number, either the current or the previous
     maxLeft[i] = Math.max(blocks[i], temp);
   }
   for(let i = blocks.length - 1; i >= 0; i--) {
-    temp = 0;
+    temp = 0;  // build the largest number moving from Right to left
     if(i < (blocks.length - 1)) {
+      // checking i + 1 because we build the object from the right
       temp = maxRight[i + 1];
-    }
+    }  // use the largest number, either the current or the previous
     maxRight[i] = Math.max(blocks[i], temp);
   }
   for(let i = 0; i < blocks.length; i++) {
+    // take the minimum of the two max numbers and subtract the current number
     total += Math.min(maxLeft[i], maxRight[i]) - blocks[i];
   }
   
