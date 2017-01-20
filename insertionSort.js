@@ -26,3 +26,29 @@ function insertionSort (array) {
 
   return array;
 }
+
+function assert(passingTest, discriptionOf) {
+  return !passingTest ? discriptionOf : 'Test Passed';
+}
+
+function compareArray(one, two) {
+  return JSON.stringify(one) === JSON.stringify(two);
+}
+
+function testArrayBuilder(max) {
+  var length = max;
+  var testArr = [];
+  while(length) {
+    var random = Math.floor(Math.random() * (max + 1));
+    testArr.push({value : random});
+    length--;
+  }
+  return testArr;
+}
+
+const testArray = testArrayBuilder(20);
+const testArray2 = testArray.slice().sort((a, b) => {return a.value - b.value;});
+const testArray3 = [{value: 11 , name: 'Bob'}, {value: 11 , name: 'Carl'}, {value: 8 , name: 'Chad'}, {value: 7 , name: 'Dan'}];
+const testArray4 = [{value: 7 , name: 'Dan'}, {value: 8 , name: 'Chad'}, {value: 11 , name: 'Bob'}, {value: 11 , name: 'Carl'}];
+console.log(assert(compareArray(insertionSort(testArray), testArray2), "insertionSort should sort the array, try again"));
+console.log(assert(compareArray(insertionSort(testArray3), testArray4), "insertionSort should be a stable sort, try again"));
