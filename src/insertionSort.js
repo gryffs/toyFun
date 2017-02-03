@@ -35,8 +35,7 @@ function compareArray(one, two) {
   return JSON.stringify(one) === JSON.stringify(two);
 }
 
-function testArrayBuilder(max) {
-  var length = max;
+function testArrayBuilder(max, length = max) {
   var testArr = [];
   while(length) {
     var random = Math.floor(Math.random() * (max + 1));
@@ -44,6 +43,17 @@ function testArrayBuilder(max) {
     length--;
   }
   return testArr;
+}
+
+function addAlphabet() {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const results = testArrayBuilder(5, alphabet.length);
+
+  for (let i = 0; i < results.length; i++) {
+    results[i].alpha = alphabet[i];
+  }
+
+  return results;
 }
 
 const testArray = testArrayBuilder(20);

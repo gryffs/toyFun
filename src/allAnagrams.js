@@ -19,5 +19,4 @@ function allAnagrams (string) {
   let result = Object.keys(uniqueOutput);
   return result;
 }
-
-allAnagrams('abc') // => [ "abc", "acb", "bac", "bca", "cab", "cba" ]
+export default allAnagrams;

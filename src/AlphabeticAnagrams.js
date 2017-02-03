@@ -18,7 +18,6 @@ function anagramPosition (string) {
   sortedStringArr.forEach(x => {
     frequency[x] ? frequency[x]++ : frequency[x] = 1;
   });  // make an object with the frequency of each letter
-  console.log(frequency);
   
   while (sortedStringArr.length) {
     for (let i = 0; i < sortedStringArr.length; i++) {
@@ -61,6 +60,8 @@ function anagramPosition (string) {
     return denominator;
   }
 }
-anagramPosition('CHAD'); // => 11
-anagramPosition('GRIFFIS'); // => 493
-anagramPosition('MISSISSIPPI'); // => 13,737
+
+export default anagramPosition;
+// anagramPosition('CHAD'); // => 11
+// anagramPosition('GRIFFIS'); // => 493
+// anagramPosition('MISSISSIPPI'); // => 13,737
