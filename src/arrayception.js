@@ -21,5 +21,4 @@ function arrayception (array) {
   return maxDepth;
 }
 
-arrayHunter([ [ 10, 20 ], [ [ 30, [ 40 ] ] ] ]); // => 4
-arrayHunter([[[]]]); // => 0
+export default arrayception;

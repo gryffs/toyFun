@@ -62,6 +62,3 @@ function anagramPosition (string) {
 }
 
 export default anagramPosition;
-// anagramPosition('CHAD'); // => 11
-// anagramPosition('GRIFFIS'); // => 493
-// anagramPosition('MISSISSIPPI'); // => 13,737
