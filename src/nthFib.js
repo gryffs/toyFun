@@ -24,4 +24,4 @@ export function nthFibRecursion(n) {
     return 1;
   }
   return nthFibRecursion(n - 1) + nthFibRecursion(n - 2);
-}
+};
