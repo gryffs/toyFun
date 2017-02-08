@@ -7,7 +7,7 @@ export function deckBuilder () {
   }, []);
   return cardDeck;
 }
-
+// Fisher - Yates Shuffle - shuffle in place
 export function shuffle (array) {
   let remainingCount = array.length;
   let temp;
