@@ -65,10 +65,4 @@ var waterBlocks = function (blocks) {
   return total;
 };
 
-function assert (passingTest, discriptionOf) {
-  return !passingTest ? discriptionOf : 'Test Passed';
-}
-
-console.log(assert(waterBlocks([5, 2, 3, 2, 1, 3]) === 4, '[5, 2, 3, 2, 1, 3] should return 4, try again'));
-console.log(assert(waterBlocks([3, 2, 1, 4]) === 3, '[3, 2, 1, 4] should return 3, try again'));
-console.log(assert(waterBlocks([1, 4, 1, 3, 1, 5, 3, 1, 4, 3, 1, 2, 3, 2, 2, 3, 4]) === 23, '[1, 4, 1, 3, 1, 5, 3, 1, 4, 3, 1, 2, 3, 2, 2, 3, 4] should return 23, try again'))
+export default waterBlocks;
